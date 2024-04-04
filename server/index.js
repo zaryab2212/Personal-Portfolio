@@ -17,13 +17,11 @@ const port = process.env.PORT || 8080;
 app.use(express.json());
 app.use(cookieparser());
 app.use(
-  cors(
-    cors({
-      origin: "https://personal-portfolio-ten-sepia.vercel.app",
-      allowedHeaders: "Content-Type,Authorization",
-      credentials: true,
-    })
-  )
+  cors({
+    origin: "https://personal-portfolio-ten-sepia.vercel.app",
+    allowedHeaders: "Content-Type,Authorization",
+    credentials: true,
+  })
 );
 app.use(express.static(path.resolve(__dirname, "build")));
 
