@@ -13,15 +13,25 @@ const app = express();
 
 const port = process.env.PORT || 8080;
 
+// MiddleWare
 app.use(express.json());
 app.use(cookieparser());
-app.use(cors());
+app.use(
+  cors(
+    cors({
+      origin: "https://personal-portfolio-ten-sepia.vercel.app",
+      allowedHeaders: "Content-Type,Authorization",
+      credentials: true,
+    })
+  )
+);
+app.use(express.static(path.resolve(__dirname, "build")));
 
+// Routes
 app.use("/auth", authRouter);
 app.use("/project", projectRouter);
 app.use("/skill", skillRouter);
 app.use("/testimonial", testimonialRouter);
-app.use(express.static(path.resolve(__dirname, "build")));
 
 //database connection
 db();
