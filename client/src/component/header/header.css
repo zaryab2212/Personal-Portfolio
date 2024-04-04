@@ -1,0 +1,177 @@
+.header-container  {
+    display: flex; 
+   flex-direction: column
+   
+ } 
+
+ .header-left {
+    background-color: var(--bs-orange);
+    width: 100%;
+    padding-top: 150px;
+  }
+  
+  .header-right {
+    width: 70%;
+    padding-top: 100px;
+  }
+  
+  .profile-image {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .header-right {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    padding: 5px 10px;
+    padding-top: 60px;
+  }
+  
+  .header-right-content {
+    width: 100%;
+    /* max-width: 500px; */
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+  }
+  
+  .header-right-content h3 {
+    /* font-size: 25px; */
+    /* margin-bottom: 0; */
+    font-size: 18px;
+    order: -1;
+    position: relative;
+    top: -10px;
+  }
+  
+  .header-right-content h1 {
+    /* font-size: 50px; */
+    margin-top: 10px;
+    margin-bottom: 0;
+    order: -2;
+    font-size: 35px;
+    color:var(--bs-orange)
+  }
+  
+  .header-right-content p {
+    font-size: 16px;
+    position: relative;
+    top: -20px;
+  }
+  
+  .header-right-button button {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border-radius: 50px;
+    width: 100%;
+    color:#F4F4F4;
+    /* max-width: 150px; */
+    max-width: 130px;
+    margin-top: 20px;
+    border: none;
+    background-color: var(--bs-gray);
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: background 0.3s;
+  }
+  .header-right-button button:first-child:hover {
+    background-color: var(--bs-orange);
+    color: #090580;
+  
+  }
+  
+  .header-right-button button:last-child {
+    background-color: var(--bs-orange);
+  
+  }
+  
+  .header-right-button button:last-child:hover {
+    background-color: var(--background);
+    border-color: var(--bs-orange);
+  
+  }
+
+
+
+
+
+
+
+ @media all and (min-width:1000px) {
+    .top {
+      padding: 20px 60px;
+    }
+    .burger-menu{
+      color: var(--textColor);
+    }
+  
+    .header-container {
+      flex-direction: row;
+      height: 500px;
+    }
+
+    .header-left {
+        background-color: var(--bs-orange);
+        width: 100%;
+        max-width: 350px;
+        padding-top: 170px;
+      }
+    
+      .profile-image {
+        height: 200px;
+      }
+    
+      .profile-image img {
+        width: 250px;
+        height: 250px;
+        border-radius: 250px;
+        transform: translateX(60%);
+      }
+    
+      .header-right-content {
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    
+      }
+    
+      .header-right-content h3 {
+        font-size: 25px;
+        margin-bottom: 0;
+        order: -2;
+        top: 0px;
+      }
+    
+      .header-right-content h1 {
+        font-size: 50px;
+        margin-top: 0;
+        margin-bottom: 0;
+        order: -1;
+      }
+    
+      .header-right-content p {
+        font-size: 16px;
+        top: 0px;
+      }
+
+}

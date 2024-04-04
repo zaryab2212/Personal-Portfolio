@@ -1,0 +1,40 @@
+.welcome-left h1{
+    color:var(--bs-orange);
+    font-size: 32px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .welcome_image{
+      max-width: 400px;
+      margin: auto;
+  }
+  .welcome_image img{
+    width: 100%;
+  }
+  
+
+  /*********************************media****************/
+@media all and (min-width:1000px) {
+ 
+  
+   
+ 
+  
+  
+    .welcome_container{
+      display: flex;
+    }
+    .welcome-left{
+      flex: 1 1;
+      /* max-width: 500px; */
+      max-width: 70%;
+    }
+    .welcome-right{
+   width: 30%;
+      
+    }
+    .welcome-left h1{
+      font-size: 45px;
+      max-width: 400px;
+    }
+}

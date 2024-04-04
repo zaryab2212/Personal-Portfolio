@@ -1,0 +1,85 @@
+import React from "react";
+import { MdOutlineMenu } from "react-icons/md";
+import HorizonalLine from "../component/horizonalLine";
+import Header from "../component/header/Header";
+import Welcome from "../component/wellcome/Welcome";
+import Education from "../component/education/Education";
+import Skills from "../component/skill/Skills";
+import Project from "../component/project/Project";
+import Contact from "../component/contact/Contact";
+import Footer from "../component/footer/Footer";
+import { useState } from "react";
+import { CgCloseR } from "react-icons/cg";
+import Specializion from "../component/specialization/Specializion";
+import Testimonial from "../component/Testimonial";
+import Testimonials from "../component/Testimonials";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { logOutUserFuncAsync } from "../redux/auth/authSlice";
+import { Oval } from "react-loader-spinner";
+
+const Home = () => {
+  const [openMenu, setOpenMenu] = useState(false);
+  const { user } = useSelector((state) => state.auth);
+  const { loading } = useSelector((state) => state.project);
+  // const { loading: skillLoad } = useSelector((state) => state.skill);
+  const dispatch = useDispatch();
+
+  const handleLogOut = () => {
+    dispatch(logOutUserFuncAsync());
+  };
+
+  return (
+    <>
+      <>
+        {openMenu && (
+          <div className="menu_container h-full">
+            <button onClick={() => setOpenMenu(false)} className="close">
+              <CgCloseR />
+            </button>
+
+            <a href="#home">Home</a>
+            <a href="#project">Project</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+            <a href="#welcome">About</a>
+            {!user && <Link to="/login">Login</Link>}
+            {!user && <Link to="/register">Register</Link>}
+            {user && (
+              <Link to="/" onClick={() => dispatch(logOutUserFuncAsync())}>
+                Logout
+              </Link>
+            )}
+          </div>
+        )}
+
+        <header>
+          <div className="top">
+            <div className="logo "></div>
+            <MdOutlineMenu
+              className="burger-menu"
+              onClick={() => setOpenMenu(true)}
+            />
+          </div>
+          <Header />
+        </header>
+        <main>
+          <HorizonalLine />
+          <Welcome />
+          <div className="horizontal_reverse">
+            <HorizonalLine />
+          </div>
+          <Skills />
+          <Project />
+          <Specializion />
+          <Education />
+          <Testimonials />
+          <Contact />
+        </main>
+        <Footer />
+      </>
+    </>
+  );
+};
+
+export default Home;
