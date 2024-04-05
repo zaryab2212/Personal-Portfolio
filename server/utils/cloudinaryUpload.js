@@ -1,9 +1,12 @@
 const cloudinary = require("cloudinary").v2;
 
 cloudinary.config({
-  cloud_name: process.env.CLOU_NAME,
-  api_key: process.env.API_KEY,
-  api_secret: process.env.API_SEC,
+  cloud_name: "dvv4ffhvi",
+  api_key: "467479789366527",
+  api_secret: "omveynTqndXu9lAWONOuSfthJU8",
+  // cloud_name: process.env.CLOU_NAME,
+  // api_key: process.env.API_KEY,
+  // api_secret: process.env.API_SEC,
 });
 
 exports.cloudinaryUpload = async (files) => {

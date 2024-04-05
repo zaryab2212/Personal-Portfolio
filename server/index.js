@@ -16,13 +16,7 @@ const port = process.env.PORT || 8080;
 // MiddleWare
 app.use(express.json());
 app.use(cookieparser());
-app.use(
-  cors({
-    origin: "personal-portfolio-ten-sepia.vercel.app",
-    allowedHeaders: "Content-Type,Authorization",
-    credentials: true,
-  })
-);
+app.use(cors());
 app.use(express.static(path.resolve(__dirname, "build")));
 
 // Routes

@@ -7,7 +7,8 @@ exports.authorized = async (req, res, next) => {
       return res.status(400).json({ message: "Please login first" });
     }
 
-    const verify = await jwt.verify(token, process.env.JWT_SEC);
+    const verify = await jwt.verify(token, "mysecretkeyisths");
+    // const verify = await jwt.verify(token, process.env.JWT_SEC);
 
     if (!verify) {
       return res

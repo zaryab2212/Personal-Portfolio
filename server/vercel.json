@@ -29,7 +29,7 @@
       { "src": "/testimonial/add", "dest": "index.js" },
       { "src": "/testimonial", "dest": "index.js" },
       { "src": "/testimonial/(.*)", "dest": "index.js" },
-            { "src": "/", "dest": "index.js" },
+      { "src": "/", "dest": "index.js" },
 
   
       { "src": "/", "dest": "build/index.html" },
