@@ -3,7 +3,7 @@ import { FaDigitalOcean, FaEthereum, FaGuilded, FaLeaf } from "react-icons/fa";
 
 const Specializion = () => {
   return (
-    <div className="mx-2 sm:mx-7 sm:p-2">
+    <div className="mx-2 mt-6 sm:mx-7 sm:p-2">
       <h1 className="heading">
         {" "}
         <span className="text-myblack">My</span> Specializions

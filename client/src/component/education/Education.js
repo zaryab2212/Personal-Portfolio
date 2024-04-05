@@ -4,7 +4,7 @@ import EducationCard from "./EducationCard";
 
 const Education = () => {
   return (
-    <div className="eduction " id="education">
+    <div className="eduction mt-6  " id="education">
       <h1 className="heading">
         {" "}
         <span className="text-myblack">My</span> Education

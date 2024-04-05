@@ -42,8 +42,8 @@ const Project = () => {
         </p>
       )}
       <div className="project" id="project">
-        <h1 className="heading font-semibold  m-7">
-          Highlight: <span className="text-myblack"> Pinnacle of My Work</span>
+        <h1 className="heading  font-semibold mx-2  mt-7 sm:m-7">
+          Highlight: <span className="text-myblack"> My Projects</span>
         </h1>
         <p className="text-[.7rem] sm:text-[.9rem] text-right mx-5 mb-4">
           Are you Admin ?

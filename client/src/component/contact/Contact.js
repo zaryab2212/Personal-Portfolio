@@ -14,13 +14,13 @@ const Contact = () => {
     setVal(inputName);
   };
   return (
-    <div className="contact" id="contact">
+    <div className="mx-w-[98%] mt-6" id="contact">
       <h1 className="heading">Contact Us</h1>
       <div className="contact_content">
         <form
           action="https://formspree.io/f/myyarkgy"
           method="POST"
-          className="contact-from"
+          className="contact-from max-w-[1rem]"
         >
           <input
             name="name"
@@ -63,7 +63,7 @@ const Contact = () => {
           ></textarea>
           <button>Send</button>
         </form>
-        <div className="socialMedia m">
+        <div className="socialMedia mt-4 mx-2">
           <div className="socialMedia_item">
             <MdEmail />
             <p>zaryabsheikh0@gmail.com</p>

@@ -4,7 +4,7 @@ import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 const Testimonial = ({ data, handleNext, handlePrev }) => {
   return (
     <>
-      <div className="sm:flex x justify-between align-middle ">
+      <div className="sm:flex mt-6 justify-between align-middle ">
         <div className="basis-[50%]">
           <img
             src={data?.image}

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, Navigate, useNavigate } from "react-router-dom";
 import { loginFuncAsync, registerFuncAsync } from "../../redux/auth/authSlice";
 import { FallingLines, Oval } from "react-loader-spinner";
+import { FaWindowClose } from "react-icons/fa";
 
 const AuthForm = ({ type = "login" }) => {
   const [Val, setVal] = useState({ email: "", password: "" });
@@ -29,6 +30,13 @@ const AuthForm = ({ type = "login" }) => {
   if (user) return <Navigate to="/" />;
   return (
     <div className="sm:max-w-[60%] w-[90%] mt-9 m-auto">
+      <Link to="/">
+        {" "}
+        <FaWindowClose
+          className="text-mytheme top-4 right-4 w-[1.3rem] h-[1.3rem] cursor-pointer hover:w-[1.4rem] hover:h-[1.4rem] absolute"
+          //  left-2 top-2 "
+        />
+      </Link>
       <form
         className="flex flex-col justify-center align-middle gap-6 mt-8"
         onSubmit={handleSubmit}

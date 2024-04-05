@@ -70,10 +70,22 @@ const Home = () => {
             <HorizonalLine />
           </div>
           <Skills />
+          <HorizonalLine />
           <Project />
+          <div className="horizontal_reverse">
+            <HorizonalLine />
+          </div>
           <Specializion />
+          <div className="horizontal_reverse">
+            <HorizonalLine />
+          </div>
           <Education />
+          <HorizonalLine />
+
           <Testimonials />
+          <div className="horizontal_reverse">
+            <HorizonalLine />
+          </div>
           <Contact />
         </main>
         <Footer />

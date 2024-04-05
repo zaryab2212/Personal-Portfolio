@@ -27,11 +27,11 @@ const ProjectCard = ({ data, setProjectEdit, setProjectFormBox }) => {
 
   return (
     <>
-      <div className="md:flex justify-start align-middle gap-4">
+      <div className="md:flex justify-start mt-4 align-middle gap-4">
         {" "}
         <div className="md:w-[45%] m-3  relative basis-[50%] flex-col object-cover">
           {/* <img src={img} alt={name} className="rounded-md" /> */}
-          <h2 className="text-myblack mb-3 font-semibold text-center text-[1.5rem]">
+          <h2 className="text-myblack mb-3 mt-6 font-semibold text-center text-[1.5rem]">
             {name}
           </h2>{" "}
           <Slider name={name} images={images} />
@@ -39,6 +39,15 @@ const ProjectCard = ({ data, setProjectEdit, setProjectFormBox }) => {
         {/* right side */}
         <div className="text-[.9rem]  basis-[50%] mt-4 flex-col justify-start align-middle">
           <div className="flex justify-between mx-1 align-bottom">
+            <div
+              onClick={() => handleEditProject(data)}
+              className="flex cursor-pointer  justify-center gap-1 mx-4 align-bottom"
+            >
+              <p className="text-mytheme underline  hover:text-[1rem] text-[.8rem]">
+                Edit
+              </p>
+              <MdEditDocument className="text-[1.2rem]   hover:text-[1.4rem]  text-mytheme cursor-pointer" />
+            </div>
             <div className="flex cursor-pointer  justify-center gap-1 mx-4 align-bottom">
               <p
                 onClick={() => {
@@ -49,16 +58,6 @@ const ProjectCard = ({ data, setProjectEdit, setProjectFormBox }) => {
                 Remove
               </p>
               <MdDeleteForever className="text-[1.4rem]   hover:text-[1.6rem]  text-red-600" />
-            </div>
-
-            <div
-              onClick={() => handleEditProject(data)}
-              className="flex cursor-pointer  justify-center gap-1 mx-4 align-bottom"
-            >
-              <p className="text-mytheme underline  hover:text-[1rem] text-[.8rem]">
-                Edit
-              </p>
-              <MdEditDocument className="text-[1.2rem]   hover:text-[1.4rem]  text-mytheme cursor-pointer" />
             </div>
           </div>
 
@@ -87,7 +86,7 @@ const ProjectCard = ({ data, setProjectEdit, setProjectFormBox }) => {
           </div>
 
           {/* Tecnologies */}
-          <div className="  gap-3  grid text-[.9rem]  grid-cols-4 lg:grid-cols-5 mt-2 justify-start align-middle">
+          <div className="  gap-3  grid text-[.9rem]  grid-cols-3 lg:grid-cols-5 mt-2 justify-start align-middle">
             {technologies &&
               technologies.length > 0 &&
               technologies.map((tech) => {
