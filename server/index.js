@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cookieparser());
 app.use(
   cors({
-    origin: "https://personal-portfolio-ten-sepia.vercel.app",
+    origin: "personal-portfolio-ten-sepia.vercel.app",
     allowedHeaders: "Content-Type,Authorization",
     credentials: true,
   })
