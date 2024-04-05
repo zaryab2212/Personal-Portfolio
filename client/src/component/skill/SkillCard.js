@@ -30,7 +30,7 @@ const SkillCard = ({ skill, setEditProduct }) => {
       >
         <img
           src={skill?.images}
-          className={`object-cover  w-[9rem] rounded-full
+          className={`object-cover animate-wiggle animate-infinite w-[9rem] rounded-full
             h-[9rem]`}
         />
         {isHover && (

@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCard";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProjectsAsync, nullError } from "../../redux/projectSlice";
 import ProjectForm from "../form/ProjectForm";
+import AddNewForm from "../AddNewForm";
 
 const Project = () => {
   const dispatch = useDispatch();
@@ -46,15 +47,7 @@ const Project = () => {
           Highlight: <span className="text-myblack"> My Projects</span>
         </h1>
 
-        <p className="text-[1rem] text-right mx-5 mb-4">
-          Are you Admin ?
-          <span
-            onClick={handleFormOpen}
-            className="cursor-pointer text-[1.2rem] underline text-mytheme"
-          >
-            Add latest Project here
-          </span>{" "}
-        </p>
+        <AddNewForm func={handleFormOpen} type={"Project"} />
         <div className="w-full mt-7">
           {projects &&
             projects.length > 0 &&

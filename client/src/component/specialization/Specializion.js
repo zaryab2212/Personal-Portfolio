@@ -10,7 +10,7 @@ const Specializion = () => {
       </h1>
 
       <div className="  gap-5 grid lg:grid-cols-4 grid-cols-2 text-start     mt-9  justify-center ">
-        <div className="flex flex-col  border-mygrey p-3 sm:p-5 gap-4  border-[.1rem] rounded-2xl  justify-top align-middle">
+        <div className="flex animate-jump-in flex-col  border-mygrey p-3 sm:p-5 gap-4  border-[.1rem] rounded-2xl  justify-top align-middle">
           <div className="flex sm:p-2 justify-between align-middle">
             {" "}
             <h2 className="text-mytheme text-[1.1rem] sm:text-[1.2rem] font-semibold">
@@ -30,7 +30,7 @@ const Specializion = () => {
             across devices.
           </p>
         </div>
-        <div className="flex flex-col basis-[23%] border-mygrey p-3 sm:p-5 gap-4  border-[.1rem] rounded-2xl  justify-top align-middle">
+        <div className="flex animate-jump-in   flex-col basis-[23%] border-mygrey p-3 sm:p-5 gap-4  border-[.1rem] rounded-2xl  justify-top align-middle">
           <div className="flex sm:p-2 justify-between align-middle">
             {" "}
             <h2 className="text-mytheme text-[1.1rem] sm:text-[1.2rem] font-semibold">
@@ -47,7 +47,7 @@ const Specializion = () => {
             projects, ensuring seamless data management and robust functionality
           </p>
         </div>
-        <div className="flex flex-col basis-[23%] border-mygrey p-3 sm:p-5 gap-4  border-[.1rem] rounded-2xl  justify-top align-middle">
+        <div className="flex animate-jump-in flex-col basis-[23%] border-mygrey p-3 sm:p-5 gap-4  border-[.1rem] rounded-2xl  justify-top align-middle">
           <div className="flex sm:p-2 justify-between align-middle">
             {" "}
             <h2 className="text-mytheme text-[1.1rem] sm:text-[1.2rem] font-semibold">
@@ -64,7 +64,7 @@ const Specializion = () => {
             seamless API integration."
           </p>
         </div>
-        <div className="flex flex-col basis-[23%] border-mygrey p-3 sm:p-5 gap-4  border-[.1rem] rounded-2xl  justify-top align-middle">
+        <div className="flex animate-jump-in flex-col basis-[23%] border-mygrey p-3 sm:p-5 gap-4  border-[.1rem] rounded-2xl  justify-top align-middle">
           <div className="flex sm:p-2 justify-between align-middle">
             {" "}
             <h2 className="text-mytheme text-[1.1rem] sm:text-[1.2rem] font-semibold">

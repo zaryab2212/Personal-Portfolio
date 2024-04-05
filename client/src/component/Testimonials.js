@@ -6,6 +6,7 @@ import {
   testimonialFormOpen,
 } from "../redux/testimonials/testimonialSlice";
 import TestimonialForm from "./form/TestimonialForm";
+import AddNewForm from "./AddNewForm";
 
 const Testimonials = () => {
   const [single, setSingle] = useState(0);
@@ -40,19 +41,15 @@ const Testimonials = () => {
     <div className="">
       <div className="mt-3 ">
         <h1 className="heading font-semibold m-4 text-start">Testimonials</h1>
-        <p className="text-[1rem] text-right mx-5 mb-4">
-          Are you Admin ?{" "}
-          <span
-            onClick={() => dispatch(testimonialFormOpen())}
-            className="cursor-pointer text-[1.2rem] underline text-mytheme"
-          >
-            Add latest Testimonial here
-          </span>{" "}
-        </p>
+
+        <AddNewForm
+          func={() => dispatch(testimonialFormOpen())}
+          type={"Testionial"}
+        />
       </div>
       {/* {data.map((e) => {
         return ( */}
-      <div className={`${animate ? "animate-pulse" : ""}`}>
+      <div className={`${animate ? "animate-ping ease-in-out" : ""}`}>
         <Testimonial
           data={testimonial && testimonial[single]}
           handleNext={handleNext}

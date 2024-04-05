@@ -8,6 +8,7 @@ import {
 } from "../../redux/skills/skillSlice";
 import SkillForm from "../form/SkillForm";
 import { Link } from "react-router-dom";
+import AddNewForm from "../AddNewForm";
 
 const Skills = () => {
   const { skills, formOpen, error } = useSelector((state) => state.skill);
@@ -33,15 +34,9 @@ const Skills = () => {
         <h1 className="heading font-semibold mx-4 my-4 text-start">
           <span className="text-myblack">My</span> Skills
         </h1>
-        <p className="text-[1rem] text-right mx-5 mb-4">
-          Are you Admin ?{" "}
-          <span
-            onClick={() => dispatch(skillFormBoxOpen())}
-            className="cursor-pointer text-[1.2rem] underline text-mytheme"
-          >
-            Add new skill here
-          </span>{" "}
-        </p>
+
+        <AddNewForm func={() => dispatch(skillFormBoxOpen())} type={"Skill"} />
+
         <div className="">
           <div className="grid md:grid-cols-4 grid-cols-2 w-full gap-4">
             {skills &&
