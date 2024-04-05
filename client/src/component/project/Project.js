@@ -45,11 +45,12 @@ const Project = () => {
         <h1 className="heading  font-semibold mx-2  mt-7 sm:m-7">
           Highlight: <span className="text-myblack"> My Projects</span>
         </h1>
-        <p className="text-[.7rem] sm:text-[.9rem] text-right mx-5 mb-4">
+
+        <p className="text-[1rem] text-right mx-5 mb-4">
           Are you Admin ?
           <span
             onClick={handleFormOpen}
-            className="cursor-pointer text-[.9rem] sm:text-[1.2rem] underline text-mytheme"
+            className="cursor-pointer text-[1.2rem] underline text-mytheme"
           >
             Add latest Project here
           </span>{" "}

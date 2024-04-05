@@ -7,44 +7,6 @@ import {
 } from "../redux/testimonials/testimonialSlice";
 import TestimonialForm from "./form/TestimonialForm";
 
-const data = [
-  {
-    image: "/images/ecommrasce.png",
-    comment: `Testimonials are statements or endorsements provided by individuals
-            or entities who have used a product, service, or worked with a
-            person or organization. These statements typically express
-            satisfaction, approval, or support for the subject being discussed.
-            Testimonials serve as social proof and can influence others
-            perceptions and decisions.`,
-    org: "MAAZ INFORMATICS",
-    name: "Zahid Billal",
-    designation: "CEO & HR",
-  },
-  {
-    image: "/images/ecommrasce.png",
-    comment: `Testimonials are statements or endorsements provided by individuals
-            or entities who have used a product, service, or worked with a
-            person or organization. These statements typically express
-            satisfaction, approval, or support for the subject being discussed.
-            Testimonials serve as social proof and can influence others
-            perceptions and decisions.`,
-    org: "MAAZ INFORMATICS",
-    name: "Zahid Billdfddfal",
-    designation: "CEO & HR",
-  },
-  {
-    image: "/images/ecommrasce.png",
-    comment: `Testimonials are statements or endorsements provided by individuals
-            or entities who have used a product, service, or worked with a
-            person or organization. These statements typically express
-            satisfaction, approval, or support for the subject being discussed.
-            Testimonials serve as social proof and can influence others
-            perceptions and decisions.`,
-    org: "MAAZ INFORMATICS",
-    name: "Zahid Billfdfdal",
-    designation: "CEO & HR",
-  },
-];
 const Testimonials = () => {
   const [single, setSingle] = useState(0);
   const [animate, setAnimate] = useState(false);
