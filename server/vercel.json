@@ -11,11 +11,11 @@
     ],
   
     "routes": [
-      { "src": "/auth", "dest": "index.js" },
       { "src": "/auth/login", "dest": "index.js" },
       { "src": "/auth/register", "dest": "index.js" },
       { "src": "/auth/logout", "dest": "index.js" },
-  
+      { "src": "/auth", "dest": "index.js" },
+      
       { "src": "/auth/(.*)", "dest": "index.js" },
      
   
@@ -29,6 +29,8 @@
       { "src": "/testimonial/add", "dest": "index.js" },
       { "src": "/testimonial", "dest": "index.js" },
       { "src": "/testimonial/(.*)", "dest": "index.js" },
+            { "src": "/", "dest": "index.js" },
+
   
       { "src": "/", "dest": "build/index.html" },
       { "src": "/(.+)", "dest": "build/$1" }
