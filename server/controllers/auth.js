@@ -36,12 +36,8 @@ exports.userLogin = async (req, res, next) => {
 
     const token = await jwt.sign(
       { userId: verifyUser._id, isAdmin: verifyUser.isAdmin },
-      "mysecretkeyisths"
+      process.env.JWT_SEC
     );
-    // const token = await jwt.sign(
-    //   { userId: verifyUser._id, isAdmin: verifyUser.isAdmin },
-    //   process.env.JWT_SEC
-    // );
 
     const { email, isAdmin } = verifyUser;
     res
