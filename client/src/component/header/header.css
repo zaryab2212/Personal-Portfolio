@@ -46,17 +46,19 @@
     margin: auto;
     text-align: center;
     display: flex;
+    
     flex-direction: column;
     gap: .4rem;
   }
   
   .header-right-content h3 {
-    /* font-size: 25px; */
+     font-size: 25px; 
     /* margin-bottom: 0; */
     font-size: 18px;
     order: -1;
     position: relative;
     top: -10px;
+    margin: .5rem;
   }
   
   .header-right-content h1 {

@@ -9,8 +9,9 @@ const Welcome = () => {
           Welcome to <span className="text-mygrey">Zaryab’s</span> MERN Site!
         </h1>
         <p>
-          My name Zaryab Ikram. I'm from Pakistan, I am a Full Stack
-          Developer.(MERN)
+          My name Zaryab Ikram. I'm from Pakistan, I'm graducated in BS
+          Information Technology. I am experienced a Full Stack Developer(MERN)
+          having 7 months of experience successfully deliver various projects.
         </p>
         <p>
           Proficient in front-end development, I have a strong command of{" "}
@@ -24,21 +25,6 @@ const Welcome = () => {
           with creativity and innovation. Collaborating effectively with teams,
           clients, and stakeholders is a core aspect of my work, ensuring the
           successful delivery of projects. <br />
-          Driven by my passion for web development, I actively engage in online
-          courses and workshops to expand my knowledge and skills. This
-          commitment to continuous learning enables me to stay at the forefront
-          of industry advancements and deliver high-quality solutions.
-          <br />
-          I take immense pride in my portfolio, which showcases a collection of
-          my best work. Each project reflects my dedication to excellence,
-          combining elegant designs with seamless functionality.
-          <br />
-          If you have a web development project or are interested in
-          collaborating, I would be delighted to connect with you. Feel free to
-          reach out to me through email or connect with me on social media.
-          Let's bring your ideas to life and create exceptional digital
-          experiences together."
-          <br />
         </p>
       </div>
       <div className="flex text-center gap-7 mt-9  justify-start align-top">

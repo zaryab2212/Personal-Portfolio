@@ -3,13 +3,13 @@ import { FaDigitalOcean, FaEthereum, FaGuilded, FaLeaf } from "react-icons/fa";
 
 const Specializion = () => {
   return (
-    <div className="mx-2 mt-6 sm:mx-7 sm:p-2">
+    <div className="mx-1 mt-6 sm:mx-7 ">
       <h1 className="heading">
         {" "}
         <span className="text-myblack">My</span> Specializions
       </h1>
 
-      <div className="  gap-5 grid  lg:grid-cols-4 grid-cols-2 text-start     mt-9  justify-center ">
+      <div className="  sm:gap-5 gap-1 grid  lg:grid-cols-4 grid-cols-2 text-start     mt-9  justify-center ">
         <div className="flex animate-jump-in flex-col hover:border-mytheme transition   border-mygrey p-3 sm:p-5 gap-4  border-[.1rem] rounded-2xl  justify-top align-middle">
           <div className="flex sm:p-2 justify-between align-middle">
             {" "}

@@ -15,12 +15,10 @@ const Header = () => {
           <h1>Zaryab Ikram</h1>
           <p className="text-mygrey">
             Hello! I'm Zaryab Ikram, a dedicated MERN stack developer with a
-            Bachelor of Science in Information Technology from the University of
-            Sargodha. Over the past six months, I've immersed myself in the
-            world of MERN stack development, building a variety of projects both
-            for personal enrichment and professional endeavors. I'm passionate
-            about leveraging cutting-edge technologies to create innovative
-            solutions and enhance user experiences.
+            Bachelor of Science in Information Technology. Over the past 7 month
+            experience, I've immersed myself in the world of MERN stack
+            development, building a variety of projects both for personal
+            enrichment and professional endeavors.
           </p>
           <div className="header-right-button">
             <a

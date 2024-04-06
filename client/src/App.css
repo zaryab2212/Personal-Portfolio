@@ -99,7 +99,7 @@ body {
   color: var(--background);
 }
 .burger-menu{
-  color: black;
+  color: var(--bs-textColor);
   cursor: pointer;
   position: fixed;
   top:2%;
@@ -256,35 +256,9 @@ main{
 
 
 
-.contact-from{
-  display: grid;
-  max-width: 100%;
-}
-.contact-from input,
-.contact-from textarea{
-  font-size: 20px;
-  border:3px solid var(--bs-orange);
-  margin-top: 10px;
-  border-radius: 30px;
-  padding: .5rem;
-  outline: none;
-}
-.contact-from textarea{
-  outline: none;
-  resize: none;
-}
-.contact-from button{
-  background: var(--bs-orange);
-  width: 100px;
-  padding: 10px 20px;
-  font-size: 20px;
-  margin-top: 20px;
-  border-radius: 50px;
-  border:none;
-  outline: none;
-  font-weight: 600;
-  color: #D9D9D9;
-}
+
+
+
 
 .socialMedia_item{
   display: flex;
@@ -360,12 +334,12 @@ footer{
   }
   .contact_content{
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .contact_content form,
-  .contact_content .socialMedia{
-    flex: 1;
-  }
+
+
   .socialMedia{
     padding-left: 50px;
   }

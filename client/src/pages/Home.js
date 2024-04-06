@@ -33,7 +33,7 @@ const Home = () => {
     <>
       <>
         {openMenu && (
-          <div className="menu_container h-full">
+          <div className="menu_container  h-full">
             <button onClick={() => setOpenMenu(false)} className="close">
               <CgCloseR />
             </button>
@@ -57,7 +57,7 @@ const Home = () => {
           <div className="top">
             <div className="logo "></div>
             <MdOutlineMenu
-              className="burger-menu"
+              className="burger-menu text-mygrey"
               onClick={() => setOpenMenu(true)}
             />
           </div>
