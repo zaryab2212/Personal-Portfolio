@@ -6,7 +6,7 @@ const Welcome = () => {
     <div className="welcome_container" id="welcome">
       <div className="welcome-left">
         <h1 className="heading">
-          Welcome to <span className="text-myblack">Zaryab’s</span> MERN Site!
+          Welcome to <span className="text-mygrey">Zaryab’s</span> MERN Site!
         </h1>
         <p>
           My name Zaryab Ikram. I'm from Pakistan, I am a Full Stack

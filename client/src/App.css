@@ -5,10 +5,13 @@
 
 
 :root {
-  --bs-orange:#4424fd;
-  --background: #f0f0f0;
-  --textColor: rgb(19, 15, 15);
+ 
+  --bs-orange:#3E8DE3; 
+  --background: #1f1f1f;
+  /* --textColor: rgb(19, 15, 15); */
+  --textColor: #ffffff;
   --bs-gray: #D9D9D9;
+  /* --bs-gray: #D9D9D9; */
 }
 
 a{
@@ -171,17 +174,20 @@ main{
 }
 .education_card_content{
   padding-left: 15px;
+
 }
 .education_card_content h3{
   margin: 0;
   font-size: 16px;
-  color: var(--background);
+  color: var(--bs-gray);
+
 }
 .education_card_content p{
   margin: 0 ;
   font-size: 17px;
   font-weight: 500;
-  color: var(--background);
+  color: var(--bs-gray);
+
 }
 
 .education_image{
@@ -289,6 +295,7 @@ main{
 .socialMedia_item p{
   padding-left: 10px;
   cursor: pointer;
+  color: var(--bs-gray);
 }
 .socialMedia_personal{
   width: 100%;
@@ -301,8 +308,8 @@ main{
 }
 
 footer{
-  padding: 20px;
-  background-color: var(--bs-gray);
+  padding: 15px;
+  background-color: var(--bs-orange);
   font-size: 20px;
   text-align: center;
   font-weight: 550;

@@ -4,7 +4,7 @@ import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
 const Testimonial = ({ data, handleNext, handlePrev }) => {
   return (
     <>
-      <div className="sm:flex mt-6 justify-between align-middle ">
+      <div className="sm:flex mt-6 justify-between text-mygrey align-middle ">
         <div className="basis-[50%]">
           <img
             src={data?.image}
@@ -23,13 +23,13 @@ const Testimonial = ({ data, handleNext, handlePrev }) => {
             <div className=" mt-5  ">
               <button
                 onClick={handleNext}
-                className="px-6 cursor-pointer hover:text-[1.2rem] py-2 mx-2 border-3 bg-mygrey text-mytheme  rounded-l-full m-auto rounded-b-full object-cover "
+                className="px-6 cursor-pointer hover:animate-bounce hover:transition   py-2 mx-2 border-3 bg-mygrey text-mytheme  rounded-l-full m-auto rounded-b-full object-cover "
               >
                 <FaLongArrowAltLeft />
               </button>
               <button
                 onClick={handlePrev}
-                className="px-6 cursor-pointer hover:text-[1.2rem] py-2 mx-2 border-3 bg-mygrey text-mytheme  rounded-l-full m-auto rounded-b-full object-cover"
+                className="px-6 cursor-pointer hover:animate-bounce hover:transition   py-2 mx-2 border-3 bg-mygrey text-mytheme  rounded-l-full m-auto rounded-b-full object-cover"
               >
                 {" "}
                 <FaLongArrowAltRight />{" "}

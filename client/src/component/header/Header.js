@@ -13,7 +13,7 @@ const Header = () => {
         <div className="header-right-content">
           <h3>Full Stack Developer</h3>
           <h1>Zaryab Ikram</h1>
-          <p>
+          <p className="text-mygrey">
             Hello! I'm Zaryab Ikram, a dedicated MERN stack developer with a
             Bachelor of Science in Information Technology from the University of
             Sargodha. Over the past six months, I've immersed myself in the
