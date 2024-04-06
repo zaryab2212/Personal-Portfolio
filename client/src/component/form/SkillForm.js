@@ -70,7 +70,7 @@ const SkillForm = ({ type = "add", editProduct, setEditProduct }) => {
   }
 
   return (
-    <div className="bg-mygrey relative  border-[1px] border-mytheme rounded-2xl sm:max-w-[40rem] py-8 max-w-[90%]">
+    <div className="bg-mybg  relative  border-[1px] border-mytheme rounded-2xl  py-8 ">
       <FaWindowClose
         onClick={handleClose}
         className="text-mytheme top-4 right-4 w-[1.3rem] h-[1.3rem] cursor-pointer hover:w-[1.4rem] hover:h-[1.4rem] absolute"
@@ -85,11 +85,11 @@ const SkillForm = ({ type = "add", editProduct, setEditProduct }) => {
       </h1>
       <div className="sm:max-w-[60%] w-[90%] mt-9 m-auto">
         <form
-          className="flex flex-col justify-center align-middle gap-6 mt-8"
+          className="flex flex-col text-mygrey justify-center align-middle gap-6 mt-8"
           onSubmit={handleSubmit}
         >
           <input
-            className="py-2 px-6 rounded-xl border-mytheme border-[2px]"
+            className="py-2  bg-mybg px-6 rounded-xl border-mytheme border-[2px]"
             name="name"
             value={Val?.name}
             onChange={handleInput}
@@ -102,7 +102,7 @@ const SkillForm = ({ type = "add", editProduct, setEditProduct }) => {
             placeholder={"jfdkjdfkj"}
             value={Val.stars}
             onChange={handleInput}
-            className="py-2 px-6 rounded-xl border-mytheme border-[2px]"
+            className="py-2 bg-mybg  px-6 rounded-xl border-mytheme border-[2px]"
           >
             {new Array(5).fill().map((e, i) => (
               <>
@@ -114,7 +114,7 @@ const SkillForm = ({ type = "add", editProduct, setEditProduct }) => {
           </select>
 
           <input
-            className="py-2 w-full  bg-white  px-6 rounded-xl border-mytheme border-[2px]"
+            className="py-2 w-full bg-mybg  bg-white  px-6 rounded-xl border-mytheme border-[2px]"
             name="imgFiles"
             // value={imgFiles}
             onChange={(e) => setimgFiles(e.target.files)}
@@ -130,7 +130,7 @@ const SkillForm = ({ type = "add", editProduct, setEditProduct }) => {
             </p>
           )}
 
-          <button className="py-2 px-6 rounded-xl bg-mytheme text-center border-[2px] text-white ">
+          <button className="py-2 px-6 border-mybg rounded-xl bg-mytheme text-center border-[2px] text-white ">
             {loading ? (
               <div className="text-mythem mt-[-4] pt-[-3] w-10 m-auto">
                 <Oval

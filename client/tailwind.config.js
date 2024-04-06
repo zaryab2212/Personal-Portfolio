@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         // myblack: "#130f0f",
         // mytheme: "#082be7",
+        mybg: "#1f1f1f",
         myblack: "#ffffff",
         // mytheme: "#28e98c",
         mytheme: "#3E8DE3",

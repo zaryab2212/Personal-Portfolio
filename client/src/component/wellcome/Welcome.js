@@ -30,14 +30,11 @@ const Welcome = () => {
       <div className="flex text-center gap-7 mt-9  justify-start align-top">
         <div className="flex flex-col border-mygrey align-top px-3 py-2 max-w-[15rem] border-[.1rem] rounded-2xl  justify-center ">
           <h2 className="text-mytheme heading font-semibold"> 1+</h2>
-          <p className="text-myblack"> Years of experience in webdevelopment</p>
+          <p className="text-myblack"> Years of experience </p>
         </div>
         <div className="flex flex-col border-mygrey  align-top px-3 py-2 max-w-[15rem] border-[.1rem] rounded-2xl ustify-center ">
           <h2 className="text-mytheme  heading font-semibold"> 7+</h2>
-          <p className="text-myblack">
-            {" "}
-            Pojects completed for personal as well as for clients{" "}
-          </p>
+          <p className="text-myblack"> Pojects completed </p>
         </div>
         <div></div>
       </div>

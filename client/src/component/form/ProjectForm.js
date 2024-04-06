@@ -91,21 +91,25 @@ const ProjectForm = ({
 
   return (
     <>
-      <div className=" mt-3   m-auto p-4 sm:p-8 bg-mygrey relative sm:px-[3rem]  border-[1px] border-mytheme rounded-2xl  ">
+      <div className=" mt-3   m-auto p-4 sm:p-8 bg-mybg relative sm:px-[3rem]  border-[1px] border-mytheme rounded-2xl  ">
         <FaWindowClose
           onClick={handeFormClose}
           className="text-mytheme top-4 right-4 w-[1.3rem] h-[1.3rem] cursor-pointer hover:w-[1.4rem] hover:h-[1.4rem] absolute"
           //  left-2 top-2 "
         />
         <h1 className=" text-[1.5rem] font-semibold sm:text-[2rem] text-mytheme  text-center">
-          Please Add <span className="text-myblack">new Project</span> here!
+          Please{" "}
+          <span className="text-white bg-mybg ">
+            {projectEdit ? "Edit Project" : "Add Project"}
+          </span>{" "}
+          here!
         </h1>
         <form
           className="flex flex-col justify-center align-middle gap-3 mt-1"
           onSubmit={handleSubmit}
         >
           <input
-            className="py-2 px-6 rounded-xl border-mytheme border-[2px]"
+            className="py-2 bg-mybg text-mygrey px-6 rounded-xl border-mytheme border-[2px]"
             name="name"
             value={Val?.name}
             onChange={handleInput}
@@ -118,7 +122,7 @@ const ProjectForm = ({
           <div>
             <div className="flex justify-between gap-2 align-middle">
               <input
-                className="py-2 px-6 w-full  rounded-xl border-mytheme border-[2px]"
+                className="py-2 bg-mybg text-mygrey px-6 w-full  rounded-xl border-mytheme border-[2px]"
                 name="technologies"
                 value={Val?.technologies}
                 onChange={handleInput}
@@ -127,7 +131,7 @@ const ProjectForm = ({
               />
               <button
                 type="button"
-                className="text-white px-3 py-1 bg-mytheme border-[1px] rounded-xl"
+                className="text-mygrey border-mybg px-3 py-1 bg-mytheme border-[1px] rounded-xl"
                 onClick={handleTech}
               >
                 Add
@@ -141,11 +145,11 @@ const ProjectForm = ({
                     <div className="p-1 pr-4  rounded-lg  relative  border-mytheme border-[1px]">
                       <p
                         onClick={() => handleTechRemove(tech)}
-                        className="text-white rounded-tr-lg px-[2px] font-semibold absolute top-[-2px] right-[-2px] bg-mytheme border-[1px] cursor-pointer"
+                        className="text-mybg  border-mybg rounded-r-lg px-[2px] font-semibold absolute top-[-2px] right-[-2px] bg-mytheme border-[1px] cursor-pointer"
                       >
                         x
                       </p>
-                      <p className="text-[.6rem]">{tech}</p>
+                      <p className="text-[.6rem ] text-mygrey ">{tech}</p>
                     </div>
                   );
                 })}
@@ -155,7 +159,7 @@ const ProjectForm = ({
             {/* Features */}
             <div className="flex justify-between gap-2 align-middle">
               <input
-                className="py-2 px-6 w-full  rounded-xl border-mytheme border-[2px]"
+                className="py-2 bg-mybg text-mygrey px-6 w-full  rounded-xl border-mytheme border-[2px]"
                 name="feature"
                 value={Val?.feature}
                 onChange={handleInput}
@@ -163,7 +167,7 @@ const ProjectForm = ({
                 placeholder="Features"
               />
               <button
-                className="text-white px-3 py-1 bg-mytheme border-[1px] rounded-xl"
+                className="text-white  border-mybg  px-3 py-1 bg-mytheme border-[1px] rounded-xl"
                 onClick={handleFeature}
                 type="button"
               >
@@ -178,11 +182,11 @@ const ProjectForm = ({
                     <div className="p-1 pr-4  rounded-lg  relative  border-mytheme border-[1px]">
                       <p
                         onClick={() => handleFeatureRemove(f)}
-                        className="text-white rounded-tr-lg px-[2px] font-semibold absolute top-[-2px] right-[-2px]  bg-mytheme border-[1px] cursor-pointer"
+                        className="text-mybg border-mybg rounded-r-lg px-[2px] font-semibold absolute top-[-2px] right-[-2px]  bg-mytheme border-[1px] cursor-pointer"
                       >
                         x
                       </p>
-                      <p className="text-[.6rem]">{f}</p>
+                      <p className="text-[.6rem] text-mygrey">{f}</p>
                     </div>
                   );
                 })}
@@ -201,7 +205,7 @@ const ProjectForm = ({
           <div className="flex justify-between gap-3 align-middle">
             {" "}
             <input
-              className="py-2 w-full px-6 rounded-xl border-mytheme border-[2px]"
+              className="py-2 bg-mybg text-mygrey w-full px-6 rounded-xl border-mytheme border-[2px]"
               name="gitRepo"
               value={Val?.gitRepo}
               onChange={handleInput}
@@ -209,7 +213,7 @@ const ProjectForm = ({
               placeholder="Git-Hub Code Link"
             />
             <input
-              className="py-2 px-6 w-full rounded-xl border-mytheme border-[2px]"
+              className="py-2 bg-mybg text-mygrey px-6 w-full rounded-xl border-mytheme border-[2px]"
               name="projectLink"
               value={Val?.projectLink}
               onChange={handleInput}
@@ -218,7 +222,7 @@ const ProjectForm = ({
             />
           </div>
           <textarea
-            className="py-2 px-6 rounded-xl border-mytheme border-[2px]"
+            className="py-2 bg-mybg text-mygrey px-6 rounded-xl border-mytheme border-[2px]"
             name="description"
             value={Val?.description}
             onChange={handleInput}
@@ -232,7 +236,7 @@ const ProjectForm = ({
             </p>
           )}
 
-          <button className="py-2 px-6 rounded-xl bg-mytheme text-center border-[2px] text-white ">
+          <button className="py-2 px-6 text-white border-mybg rounded-xl bg-mytheme text-center border-[2px]  ">
             {loading ? (
               <div className="text-mythem mt-[-4] pt-[-3] w-10 m-auto">
                 <Oval

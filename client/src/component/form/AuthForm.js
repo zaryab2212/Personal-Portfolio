@@ -38,11 +38,11 @@ const AuthForm = ({ type = "login" }) => {
         />
       </Link>
       <form
-        className="flex flex-col justify-center align-middle gap-6 mt-8"
+        className="flex flex-col text-mygrey justify-center align-middle gap-6 mt-8"
         onSubmit={handleSubmit}
       >
         <input
-          className="py-2 px-6 rounded-xl border-mytheme border-[2px]"
+          className="py-2 bg-mybg px-6 rounded-xl border-mytheme border-[2px]"
           name="email"
           value={Val?.email}
           onChange={handleInput}
@@ -51,7 +51,7 @@ const AuthForm = ({ type = "login" }) => {
           required
         />
         <input
-          className="py-2 px-6 rounded-xl border-mytheme border-[2px]"
+          className="py-2 bg-mybg px-6 rounded-xl border-mytheme border-[2px]"
           name="password"
           value={Val?.password}
           onChange={handleInput}
@@ -67,7 +67,7 @@ const AuthForm = ({ type = "login" }) => {
             {error?.message || error?.error?.message}
           </p>
         )}
-        <button className="py-2 px-6 rounded-xl bg-mytheme text-center border-[2px] text-white ">
+        <button className="py-2 px-6 rounded-xl bg-mytheme text-center border-[2px] text-white border-mybg ">
           {loading ? (
             <div className="text-mythem mt-[-4] pt-[-3] w-10 m-auto">
               <Oval

@@ -28,7 +28,7 @@ const Contact = () => {
           }}
         >
           <input
-            className="border-[3px] w-full rounded-3xl border-mytheme border-xl p-[.4rem]"
+            className="border-[3px] text-mygrey bg-mybg w-full rounded-3xl border-mytheme border-xl p-[.4rem]"
             name="name"
             value={Val.username}
             onChange={handleInput}
@@ -37,7 +37,7 @@ const Contact = () => {
             required
           />
           <input
-            className="border-[3px] w-full rounded-3xl border-mytheme border-xl p-[.4rem]"
+            className="border-[3px] text-mygrey bg-mybg w-full rounded-3xl border-mytheme border-xl p-[.4rem]"
             name="email"
             value={Val.email}
             onChange={handleInput}
@@ -46,7 +46,7 @@ const Contact = () => {
             required
           />
           <input
-            className="border-[3px] w-full rounded-3xl border-mytheme border-xl p-[.4rem]"
+            className="border-[3px] text-mygrey bg-mybg w-full rounded-3xl border-mytheme border-xl p-[.4rem]"
             name="phone"
             value={Val.phone}
             onChange={handleInput}
@@ -55,7 +55,7 @@ const Contact = () => {
             required
           />
           <input
-            className="border-[3px] w-full rounded-3xl border-mytheme border-xl p-[.4rem]"
+            className="border-[3px] text-mygrey bg-mybg w-full rounded-3xl border-mytheme border-xl p-[.4rem]"
             name="subject"
             value={Val.subject}
             onChange={handleInput}
@@ -64,14 +64,14 @@ const Contact = () => {
           />
 
           <textarea
-            className="border-[3px] w-full rounded-2xl border-mytheme border-xl p-2"
+            className="border-[3px] text-mygrey bg-mybg w-full rounded-2xl border-mytheme border-xl p-2"
             name="description"
             onChange={handleInput}
             value={Val.description}
             type="text"
             placeholder="Write you message..."
           ></textarea>
-          <button className="border-[3px] w-full rounded-2xl border-mytheme border-xl p-2 bg-mytheme">
+          <button className="border-[3px]  w-full rounded-2xl border-mytheme border-xl p-2 bg-mytheme">
             Send
           </button>
         </form>

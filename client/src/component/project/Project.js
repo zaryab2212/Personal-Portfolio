@@ -62,7 +62,7 @@ const Project = () => {
             })}
         </div>
         {projectFormBoxOpen && (
-          <div className=" fixed z-40 w-[80%] sm:w-[80%] max-h-[4rem] left-[1%] sm:left-[10%]   top-[-1%] ">
+          <div className=" fixed z-40 w-[90%] sm:w-[80%] max-h-[4rem] left-[5%] sm:left-[10%]   top-[2%] ">
             <ProjectForm
               projectEdit={projectEdit}
               setProjectFormBox={setProjectFormBox}
