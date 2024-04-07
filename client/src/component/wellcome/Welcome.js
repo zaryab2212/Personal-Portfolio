@@ -21,10 +21,6 @@ const Welcome = () => {
           completed various projects, ranging from responsive website designs to
           interactive web applications, all aimed at providing seamless user
           experiences. <br />
-          I thrive on solving complex challenges and approach web development
-          with creativity and innovation. Collaborating effectively with teams,
-          clients, and stakeholders is a core aspect of my work, ensuring the
-          successful delivery of projects. <br />
         </p>
       </div>
       <div className="flex text-center gap-7 mt-9  justify-start align-top">

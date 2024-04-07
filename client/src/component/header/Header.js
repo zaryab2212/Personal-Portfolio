@@ -16,9 +16,7 @@ const Header = () => {
           <p className="text-mygrey">
             Hello! I'm Zaryab Ikram, a dedicated MERN stack developer with a
             Bachelor of Science in Information Technology. Over the past 7 month
-            experience, I've immersed myself in the world of MERN stack
-            development, building a variety of projects both for personal
-            enrichment and professional endeavors.
+            experience.
           </p>
           <div className="header-right-button">
             <a

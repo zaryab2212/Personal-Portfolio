@@ -123,7 +123,7 @@ const ProjectCard = ({ data, setProjectEdit, setProjectFormBox }) => {
 
           {/* buttons
            */}
-          <div className="mt-3 flex justify-center align-middle gap-3">
+          <div className="my-3 flex justify-center align-middle gap-3">
             <a className="w-full" href={projectLink}>
               {" "}
               <button className="w-full hover:bg-white hover:text-mytheme border-[1px] border-mytheme  p-2 bg-mytheme text-mygrey font-semibold rounded-3xl">

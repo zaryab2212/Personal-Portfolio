@@ -33,10 +33,6 @@ const Testimonials = () => {
     // setAnimate(false);
   };
 
-  useEffect(() => {
-    dispatch(getTestimonialsAsync());
-  }, []);
-
   return (
     <div className="">
       <div className="mt-3 ">

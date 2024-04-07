@@ -114,7 +114,7 @@ const SkillForm = ({ type = "add", editProduct, setEditProduct }) => {
           </select>
 
           <input
-            className="py-2 w-full bg-mybg  bg-white  px-6 rounded-xl border-mytheme border-[2px]"
+            className="py-2 w-full bg-mybg    px-6 rounded-xl border-mytheme border-[2px]"
             name="imgFiles"
             // value={imgFiles}
             onChange={(e) => setimgFiles(e.target.files)}

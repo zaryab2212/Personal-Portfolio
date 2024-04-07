@@ -84,10 +84,10 @@ const TestimonialForm = ({
   }
 
   return (
-    <div className="bg-mygrey relative  border-[1px] border-mytheme rounded-2xl sm:max-w-[40rem] py-8 max-w-[90%]">
+    <div className=" relative text-mygrey bg-mybg   border-[1px] border-mytheme rounded-2xl  py-8 ">
       <FaWindowClose
         onClick={handleClose}
-        className="text-mytheme top-4 right-4 w-[1.3rem] h-[1.3rem] cursor-pointer hover:w-[1.4rem] hover:h-[1.4rem] absolute"
+        className=" text-mytheme top-4 right-4 w-[1.3rem] h-[1.3rem] cursor-pointer hover:w-[1.4rem] hover:h-[1.4rem] absolute"
         //  left-2 top-2 "
       />
       <h1 className="heading mt-9 text-center">
@@ -103,7 +103,7 @@ const TestimonialForm = ({
           onSubmit={handleSubmit}
         >
           <input
-            className="py-2 px-6 rounded-xl border-mytheme border-[2px]"
+            className="bg-mybg py-2 px-6 rounded-xl border-mytheme border-[2px]"
             name="name"
             value={Val?.name}
             onChange={handleInput}
@@ -111,7 +111,7 @@ const TestimonialForm = ({
             placeholder="Person's Name"
           />
           <input
-            className="py-2 px-6 rounded-xl border-mytheme border-[2px]"
+            className="bg-mybg py-2 px-6 rounded-xl border-mytheme border-[2px]"
             name="organization"
             value={Val?.organization}
             onChange={handleInput}
@@ -119,7 +119,7 @@ const TestimonialForm = ({
             placeholder="Organization Name"
           />
           <input
-            className="py-2 px-6 rounded-xl border-mytheme border-[2px]"
+            className="bg-mybg py-2 px-6 rounded-xl border-mytheme border-[2px]"
             name="designation"
             value={Val?.designation}
             onChange={handleInput}
@@ -128,7 +128,7 @@ const TestimonialForm = ({
           />
 
           <input
-            className="py-2 w-full  bg-white  px-6 rounded-xl border-mytheme border-[2px]"
+            className="bg-mybg py-2 w-full  px-6 rounded-xl border-mytheme border-[2px]"
             name="imgFiles"
             // value={imgFiles}
             onChange={(e) => setimgFiles(e.target.files)}
@@ -137,7 +137,7 @@ const TestimonialForm = ({
             placeholder="Add image"
           />
           <textarea
-            className="py-2 px-6 rounded-xl border-mytheme border-[2px]"
+            className="bg-mybg py-2 px-6 rounded-xl border-mytheme border-[2px]"
             name="comment"
             value={Val?.comment}
             onChange={handleInput}
@@ -152,7 +152,7 @@ const TestimonialForm = ({
             </p>
           )}
 
-          <button className="py-2 px-6 rounded-xl bg-mytheme text-center border-[2px] text-white ">
+          <button className="py-2 px-6 rounded-xl border-mytheme bg-mytheme text-center border-[2px] text-white ">
             {loading ? (
               <div className="text-mythem mt-[-4] pt-[-3] w-10 m-auto">
                 <Oval

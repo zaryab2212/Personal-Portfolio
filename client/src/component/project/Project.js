@@ -14,10 +14,6 @@ const Project = () => {
 
   const [projectEdit, setProjectEdit] = useState(null);
 
-  useEffect(() => {
-    dispatch(getAllProjectsAsync());
-  }, []);
-
   const handleFormOpen = () => {
     setProjectFormBox(true);
     dispatch(nullError());

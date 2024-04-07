@@ -14,9 +14,7 @@ const Skills = () => {
   const { skills, formOpen, error } = useSelector((state) => state.skill);
   const [editProduct, setEditProduct] = useState(null);
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getSkillsAsync());
-  }, []);
+
   if (error && !formOpen) {
     setTimeout(() => {
       dispatch(nullError());

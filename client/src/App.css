@@ -282,9 +282,9 @@ main{
 }
 
 footer{
-  padding: 15px;
+  padding: .8rem;
   background-color: var(--bs-orange);
-  font-size: 20px;
+  font-size: 1.1rem;
   text-align: center;
   font-weight: 550;
 }
