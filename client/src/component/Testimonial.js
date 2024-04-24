@@ -29,7 +29,7 @@ const Testimonial = ({ data, handleNext, handlePrev }) => {
               </button>
               <button
                 onClick={handlePrev}
-                className="px-6 cursor-pointer hover:animate-bounce hover:transition   py-2 mx-2 border-3  bg-mytheme text-white  rounded-l-full m-auto rounded-b-full object-cover"
+                className="px-6 cursor-pointer hover:animate-bounce hover:transition   py-2 mx-2 border-3  bg-mytheme text-white  rounded-r-full m-auto rounded-b-full object-cover"
               >
                 {" "}
                 <FaLongArrowAltRight />{" "}
