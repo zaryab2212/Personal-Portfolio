@@ -40,7 +40,6 @@ const Testimonials = () => {
 
   return (
     <div className="">
-      {console.log(loading)}
       <div className="mt-3 ">
         <h1 className="heading font-semibold m-4 text-start">Testimonials</h1>
 
