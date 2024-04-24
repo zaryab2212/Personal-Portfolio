@@ -20,6 +20,7 @@ import { Circles, Oval } from "react-loader-spinner";
 import { getSkillsAsync } from "../redux/skills/skillSlice";
 import { getAllProjectsAsync } from "../redux/projectSlice";
 import { getTestimonialsAsync } from "../redux/testimonials/testimonialSlice";
+import SkillLoading from "../component/skill/SkillLoading";
 
 const Home = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -35,88 +36,68 @@ const Home = () => {
   const handleLogOut = () => {
     dispatch(logOutUserFuncAsync());
   };
-  useEffect(() => {
-    dispatch(getSkillsAsync());
-    dispatch(getAllProjectsAsync());
-    dispatch(getTestimonialsAsync());
-  }, []);
 
   return (
     <>
-      {(projectLoad || skillLoad || testimonialLoad) && (
-        <div className="flex text-mytheme mt-[5rem] justify-center align-middle">
-          <Circles
-            height="80"
-            width="80"
-            color="#3E8DE3"
-            ariaLabel="circles-loading"
-            wrapperStyle={{}}
-            wrapperClass=""
-            visible={true}
-          />
-        </div>
-      )}
-      {(!projectLoad || !skillLoad || !testimonialLoad) && (
-        <>
-          {openMenu && (
-            <div className="menu_container  h-full">
-              <button onClick={() => setOpenMenu(false)} className="close">
-                <CgCloseR />
-              </button>
+      <>
+        {openMenu && (
+          <div className="menu_container  h-full">
+            <button onClick={() => setOpenMenu(false)} className="close">
+              <CgCloseR />
+            </button>
 
-              <a href="#home">Home</a>
-              <a href="#project">Project</a>
-              <a href="#education">Education</a>
-              <a href="#contact">Contact</a>
-              <a href="#welcome">About</a>
-              {!user && <Link to="/login">Login</Link>}
-              {!user && <Link to="/register">Register</Link>}
-              {user && (
-                <Link to="/" onClick={() => dispatch(logOutUserFuncAsync())}>
-                  Logout
-                </Link>
-              )}
-            </div>
-          )}
+            <a href="#home">Home</a>
+            <a href="#project">Project</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+            <a href="#welcome">About</a>
+            {!user && <Link to="/login">Login</Link>}
+            {!user && <Link to="/register">Register</Link>}
+            {user && (
+              <Link to="/" onClick={() => dispatch(logOutUserFuncAsync())}>
+                Logout
+              </Link>
+            )}
+          </div>
+        )}
 
-          <header>
-            <div className="top">
-              <div className="logo "></div>
-              <MdOutlineMenu
-                className="burger-menu text-mygrey"
-                onClick={() => setOpenMenu(true)}
-              />
-            </div>
-            <Header />
-          </header>
-          <main>
+        <header>
+          <div className="top">
+            <div className="logo "></div>
+            <MdOutlineMenu
+              className="burger-menu text-mygrey"
+              onClick={() => setOpenMenu(true)}
+            />
+          </div>
+          <Header />
+        </header>
+        <main>
+          <HorizonalLine />
+          <Welcome />
+          <div className="horizontal_reverse">
             <HorizonalLine />
-            <Welcome />
-            <div className="horizontal_reverse">
-              <HorizonalLine />
-            </div>
-            <Skills />
+          </div>
+          <Skills />
+          <HorizonalLine />
+          <Project />
+          <div className="horizontal_reverse">
             <HorizonalLine />
-            <Project />
-            <div className="horizontal_reverse">
-              <HorizonalLine />
-            </div>
-            <Specializion />
-            <div className="horizontal_reverse">
-              <HorizonalLine />
-            </div>
-            <Education />
+          </div>
+          <Specializion />
+          <div className="horizontal_reverse">
             <HorizonalLine />
+          </div>
+          <Education />
+          <HorizonalLine />
 
-            <Testimonials />
-            <div className="horizontal_reverse">
-              <HorizonalLine />
-            </div>
-            <Contact />
-          </main>
-          <Footer />
-        </>
-      )}
+          <Testimonials />
+          <div className="horizontal_reverse">
+            <HorizonalLine />
+          </div>
+          <Contact />
+        </main>
+        <Footer />
+      </>
     </>
   );
 };

@@ -10,11 +10,8 @@ import SkillForm from "../form/SkillForm";
 import { Link } from "react-router-dom";
 import AddNewForm from "../AddNewForm";
 import SkillLoadingCard from "./SkillLoadingCard";
-
-const Skills = () => {
-  const { skills, formOpen, error, loading } = useSelector(
-    (state) => state.skill
-  );
+const SkillLoading = () => {
+  const { skills, formOpen, error } = useSelector((state) => state.skill);
   const [editProduct, setEditProduct] = useState(null);
   const dispatch = useDispatch();
 
@@ -23,10 +20,6 @@ const Skills = () => {
       dispatch(nullError());
     }, 1200);
   }
-
-  useEffect(() => {
-    dispatch(getSkillsAsync());
-  }, []);
 
   return (
     <>
@@ -44,31 +37,15 @@ const Skills = () => {
 
         <div className="">
           <div className="grid md:grid-cols-4 grid-cols-2 w-full gap-4">
-            {loading && new Array(4).fill("k").map(() => <SkillLoadingCard />)}
-
-            {skills &&
-              skills.length > 0 &&
-              skills.map((skill) => {
-                return (
-                  <SkillCard
-                    setEditProduct={setEditProduct}
-                    skill={{ ...skill }}
-                  />
-                );
-              })}
+            <SkillLoadingCard />
+            <SkillLoadingCard />
+            <SkillLoadingCard />
+            <SkillLoadingCard />
           </div>
         </div>
-        {formOpen && (
-          <div className=" fixed z-40 w-[90%] sm:w-[65%] left-[5%]  top-5 sm:left-[22%] h-[80rem]">
-            <SkillForm
-              editProduct={editProduct}
-              setEditProduct={setEditProduct}
-            />
-          </div>
-        )}
       </div>
     </>
   );
 };
 
-export default Skills;
+export default SkillLoading;

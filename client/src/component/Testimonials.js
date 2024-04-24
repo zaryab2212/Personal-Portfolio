@@ -7,13 +7,14 @@ import {
 } from "../redux/testimonials/testimonialSlice";
 import TestimonialForm from "./form/TestimonialForm";
 import AddNewForm from "./AddNewForm";
+import TestimonialLoadingCard from "./TestimonialLoadingCard";
 
 const Testimonials = () => {
   const [single, setSingle] = useState(0);
   const [animate, setAnimate] = useState(false);
   const [editTestimonial, setEditTestimonial] = useState(false);
   const dispatch = useDispatch();
-  const { testimonial, testimonialForm } = useSelector(
+  const { testimonial, testimonialForm, loading } = useSelector(
     (state) => state.testimonial
   );
 
@@ -24,6 +25,7 @@ const Testimonials = () => {
       testimonial.length - 1 > single ? setSingle(single + 1) : setSingle(0);
     }, 500);
   };
+
   const handlePrev = () => {
     setAnimate(true);
     setTimeout(() => {
@@ -32,9 +34,13 @@ const Testimonials = () => {
     }, 500);
     // setAnimate(false);
   };
+  useEffect(() => {
+    dispatch(getTestimonialsAsync());
+  }, []);
 
   return (
     <div className="">
+      {console.log(loading)}
       <div className="mt-3 ">
         <h1 className="heading font-semibold m-4 text-start">Testimonials</h1>
 
@@ -45,12 +51,16 @@ const Testimonials = () => {
       </div>
       {/* {data.map((e) => {
         return ( */}
+
       <div className={`${animate ? "animate-ping ease-in-out" : ""}`}>
-        <Testimonial
-          data={testimonial && testimonial[single]}
-          handleNext={handleNext}
-          handlePrev={handlePrev}
-        />
+        {!loading && (
+          <Testimonial
+            data={testimonial && testimonial[single]}
+            handleNext={handleNext}
+            handlePrev={handlePrev}
+          />
+        )}
+        {loading && <TestimonialLoadingCard />}
       </div>
       {testimonialForm && (
         <div className=" fixed z-40 w-[90%] sm:w-[65%] left-[5%]  top-5 sm:left-[22%] h-[80rem]">
