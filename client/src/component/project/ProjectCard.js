@@ -1,8 +1,13 @@
-import React, { useState } from "react";
-import Slider from "../Slider";
+import React, { Suspense, lazy, useState } from "react";
+// import Slider from "../Slider";
+
 import { MdDeleteForever, MdEditDocument } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { deleteProjectAsync } from "../../redux/projectSlice";
+import ImgLoad from "./ImgLoad";
+
+const Slider = lazy(() => import("../Slider"));
+// const Home = lazy(() => import('./components/Home'));
 
 const ProjectCard = ({ data, setProjectEdit, setProjectFormBox }) => {
   const {
@@ -34,7 +39,10 @@ const ProjectCard = ({ data, setProjectEdit, setProjectFormBox }) => {
           <h2 className="text-myblack mb-3 mt-6 font-semibold text-center text-[1.5rem]">
             {name}
           </h2>{" "}
-          <Slider name={name} images={images} />
+          <Suspense fallback={<ImgLoad />}>
+            {" "}
+            <Slider name={name} images={images} />
+          </Suspense>
         </div>
         {/* right side */}
         <div className="text-[.9rem]  basis-[50%] mt-4 flex-col justify-start align-middle">

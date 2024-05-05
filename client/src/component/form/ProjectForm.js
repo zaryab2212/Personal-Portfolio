@@ -149,7 +149,7 @@ const ProjectForm = ({
                       >
                         x
                       </p>
-                      <p className="text-[.6rem ] text-mygrey ">{tech}</p>
+                      <p className="text-[.6rem]  text-mygrey ">{tech}</p>
                     </div>
                   );
                 })}
@@ -182,7 +182,7 @@ const ProjectForm = ({
                     <div className="p-1 pr-4  rounded-lg  relative  border-mytheme border-[1px]">
                       <p
                         onClick={() => handleFeatureRemove(f)}
-                        className="text-mybg border-mybg rounded-r-lg px-[2px] font-semibold absolute top-[-2px] right-[-2px]  bg-mytheme border-[1px] cursor-pointer"
+                        className="text-mybg border-mybg rounded-r-lg px-[2px] font-semibold absolute top-[-2px] right-[-2px]   bg-mytheme border-[1px] cursor-pointer"
                       >
                         x
                       </p>

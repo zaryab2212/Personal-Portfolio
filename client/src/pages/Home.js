@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { Suspense, lazy, useEffect } from "react";
 import { MdOutlineMenu } from "react-icons/md";
 import HorizonalLine from "../component/horizonalLine";
 import Header from "../component/header/Header";
@@ -10,7 +10,7 @@ import Contact from "../component/contact/Contact";
 import Footer from "../component/footer/Footer";
 import { useState } from "react";
 import { CgCloseR } from "react-icons/cg";
-import Specializion from "../component/specialization/Specializion";
+// import Specializion from "../component/specialization/Specializion";
 import Testimonial from "../component/Testimonial";
 import Testimonials from "../component/Testimonials";
 import { Link } from "react-router-dom";
@@ -21,6 +21,10 @@ import { getSkillsAsync } from "../redux/skills/skillSlice";
 import { getAllProjectsAsync } from "../redux/projectSlice";
 import { getTestimonialsAsync } from "../redux/testimonials/testimonialSlice";
 import SkillLoading from "../component/skill/SkillLoading";
+
+const Specializion = lazy(() =>
+  import("../component/specialization/Specializion")
+);
 
 const Home = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -83,7 +87,9 @@ const Home = () => {
           <div className="horizontal_reverse">
             <HorizonalLine />
           </div>
-          <Specializion />
+          <Suspense fallback={() => {}}>
+            <Specializion />
+          </Suspense>
           <div className="horizontal_reverse">
             <HorizonalLine />
           </div>

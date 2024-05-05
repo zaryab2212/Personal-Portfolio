@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import Testimonial from "./Testimonial";
+import React, { Suspense, lazy, useEffect, useState } from "react";
+// import Testimonial from "./Testimonial";
 import { useDispatch, useSelector } from "react-redux";
 import {
   getTestimonialsAsync,
@@ -8,6 +8,8 @@ import {
 import TestimonialForm from "./form/TestimonialForm";
 import AddNewForm from "./AddNewForm";
 import TestimonialLoadingCard from "./TestimonialLoadingCard";
+
+const Testimonial = lazy(() => import("./Testimonial"));
 
 const Testimonials = () => {
   const [single, setSingle] = useState(0);
@@ -53,11 +55,13 @@ const Testimonials = () => {
 
       <div className={`${animate ? "animate-ping ease-in-out" : ""}`}>
         {!loading && (
-          <Testimonial
-            data={testimonial && testimonial[single]}
-            handleNext={handleNext}
-            handlePrev={handlePrev}
-          />
+          <Suspense fallback={<TestimonialLoadingCard />}>
+            <Testimonial
+              data={testimonial && testimonial[single]}
+              handleNext={handleNext}
+              handlePrev={handlePrev}
+            />
+          </Suspense>
         )}
         {loading && <TestimonialLoadingCard />}
       </div>
