@@ -15,7 +15,7 @@ const Header = () => {
           <h1>Zaryab Ikram</h1>
           <p className="text-mygrey">
             Hello! I'm Zaryab Ikram, a dedicated MERN stack developer with a
-            Bachelor of Science in Information Technology. Over the past 7 month
+            Bachelor of Science in Information Technology. Over the past 4 years
             experience.
           </p>
           <div className="header-right-button">

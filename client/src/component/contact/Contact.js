@@ -90,7 +90,7 @@ const Contact = () => {
           </div>
 
           <div className="socialMedia_personal mt-4">
-            <a href="https://www.linkedin.com/in/m-zaryab-ikram-812a05156/">
+            <a href="https://www.linkedin.com/in/muhammad-zaryab-239598378">
               <SiLinkedin />
             </a>
             <a href="https://www.instagram.com/zaryabxheikh/?igshid=MzRlODBiNWFlZA==">
